@@ -9,6 +9,7 @@ public class Main {
         alphacount();
         dupl();
         sal();
+        dev();
     }
 
     public static void listNum(){
@@ -18,6 +19,13 @@ public class Main {
                 .filter(n -> n % 2 == 0)
                 .collect(Collectors.toList());
         System.out.println(evenNumbers);
+    }
+    public static void dev(){
+        List<String>developers=employees.stream()
+                .filter(e->e.getRole().equals("Developer"))
+                .map(Employees::getName)
+                .collect(Collectors.toList());
+        System.out.println(developers);
     }
 
     public static void alphacount(){
@@ -37,9 +45,9 @@ public class Main {
         System.out.println(unique);
     }
     static List<Employees> employees = Arrays.asList(
-       new Employees("rahul",2333330),
-       new Employees("tan",9999999),
-       new Employees("tej",59483900)
+       new Employees("rahul",2333330,"Developer"),
+       new Employees("tan",9999999"Manager"),
+       new Employees("tej",59483900,"Developer")
 
     );
 
