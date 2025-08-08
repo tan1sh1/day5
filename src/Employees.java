@@ -1,7 +1,7 @@
 public class Employees {
 
     String Name;
-    //String Role;
+    String Role;
     double Salary;
 
     public Employees(String Name,double Salary){
@@ -23,8 +23,13 @@ public class Employees {
 
     public void setSalary(double salary) {
         Salary = salary;
+    }
+    public String getRole() {
+        return Role;
+    }
 
-
+    public void setRole(String role) {
+        Role = role;
     }
 
     @Override
